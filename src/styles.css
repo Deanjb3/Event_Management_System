@@ -1,0 +1,50 @@
+/* ╔══════════════════════════════════════════╗
+   ║  EventHub — Global Styles                ║
+   ║  Palette: Dark (#0f172a) + White + Violet (#7c3aed / #a78bfa)
+   ╚══════════════════════════════════════════╝ */
+
+/* Design tokens */
+:root {
+  --clr-bg:        #f7f8fc;
+  --clr-surface:   #ffffff;
+  --clr-border:    #e2e8f0;
+  --clr-text:      #0f172a;
+  --clr-muted:     #64748b;
+  --clr-dark:      #0f172a;
+  --clr-violet:    #7c3aed;
+  --clr-violet-lt: #a78bfa;
+  --clr-violet-bg: #ede9fe;
+  --radius-card:   14px;
+  --shadow-card:   0 2px 16px rgba(15,23,42,0.08);
+  --shadow-hover:  0 8px 28px rgba(15,23,42,0.14);
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Angular Material overrides — card */
+mat-card, .mat-mdc-card {
+  border-radius: var(--radius-card) !important;
+  box-shadow: var(--shadow-card) !important;
+  background: var(--clr-surface) !important;
+}
+
+/* Snackbar */
+.mdc-snackbar__label {
+  font-family: 'Roboto', sans-serif;
+}
